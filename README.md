@@ -207,19 +207,19 @@ Sebagian besar anomali berada pada nilai PM2.5 yang tinggi (>200). Ini bisa menu
 
 ## Evaluation
 
-- Mean Absolute Error (MAE):
-  $$ MAE = \frac{1}{n} \sum\_{i=1}^{n} |y_i - \hat{y}\_i| $$  
+- **Mean Absolute Error (MAE):**  
+  MAE = (1/n) Σ |yᵢ - ŷᵢ|  
   Mengukur rata-rata kesalahan absolut antara nilai aktual dan prediksi.
 
-- Mean Squared Error (MSE):  
-  $$ MSE = \frac{1}{n} \sum\_{i=1}^{n} (y_i - \hat{y}\_i)^2 $$  
+- **Mean Squared Error (MSE):**  
+  MSE = (1/n) Σ (yᵢ - ŷᵢ)²  
   Mengukur rata-rata kesalahan kuadrat, memberikan penalti lebih besar pada kesalahan besar.
 
-- R-squared (R²):  
-  $$ R^2 = 1 - \frac{SS*{res}}{SS*{tot}} $$  
+- **R-squared (R²):**  
+  R² = 1 - (SS_res / SS_tot)  
   Mengukur seberapa baik model menjelaskan variabilitas dalam data, di mana:
-  - \( SS\_{res} \) adalah jumlah kuadrat residual (kesalahan).
-  - \( SS\_{tot} \) adalah jumlah kuadrat total dari nilai aktual ke rata-rata.
+  - SS_res = Σ (yᵢ - ŷᵢ)² (jumlah kuadrat residual).  
+  - SS_tot = Σ (yᵢ - ȳ)² (jumlah kuadrat total dari nilai aktual ke rata-rata).
 
 | Model | MAE     | MSE       | R2-Score |
 | ----- | ------- | --------- | -------- |
