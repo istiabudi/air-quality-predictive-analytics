@@ -69,31 +69,37 @@ Dataset bisa diunduh pada link ini: [Air Quality Datasets](https://github.com/ma
 
 #### EDA-Univariate
 
-g1
+![Numerical Univariate](https://github.com/user-attachments/assets/df72771b-70c4-49b1-8af6-d7d351a89a50)
+
 
 Dilihat dari histogram variabel 'PM2.5', yang merupakan target fitur (label),
 Data distribusi menunjukkan Miring ke Kanan, Pola ini menunjukkan bahwa konsentrasi partikel halus di udara umumnya dalam batas aman, tetapi terdapat periode di mana jumlahnya meningkat tajam. Partikel halus ini sangat berbahaya karena dapat masuk ke dalam sistem pernapasan manusia dan sering kali meningkat akibat pembakaran bahan bakar dan aktivitas industri.
 
-g2
+![Wind Direction univariate](https://github.com/user-attachments/assets/bca5c63a-ca5d-44bc-8f0f-2c48b552be4e)
+
 
 Terdapat 16 kategori yang mempresentasikan mata angin pada fitur wd, dari data tersebut bisa disimpulkan bahwa datanya hampir merata dengan yang tertinggi pada hari pada arah barat laut yaitu 14.4% dan arah selatan yang paling kecil datanya dengan presentase 3.8 persen.
 
 #### EDA-Multivariate
 
-g1
+![numerikal multivariat](https://github.com/user-attachments/assets/29322975-8717-43f6-a20f-2e7d479370dc)
+
 
 Berdasarkan scatter plot diatas CO, NO2, SO2, PM10 terlihat berhubungan dengan PM2.5 secara positif.
 
-g2
+![kategori multivariat](https://github.com/user-attachments/assets/b81d1a04-6154-40fa-898f-805020445374)
+
 
 - Beberapa arah angin seperti SSE (South-Southeast) dan WNW (West-Northwest) memiliki PM2.5 tertinggi, yang berarti polusi lebih banyak ketika angin bertiup dari arah ini.
 - Jika angin datang dari arah dengan PM2.5 tinggi, kemungkinan daerah tersebut memiliki sumber pencemaran signifikan (misalnya industri, pembakaran sampah, atau aktivitas kendaraan berat). Jika angin datang dari arah dengan PM2.5 rendah, kemungkinan angin membawa udara lebih bersih, atau ada faktor geografis yang membantu menyebarkan polutan.
 
-g3
+![pca](https://github.com/user-attachments/assets/223b59fa-5ac2-4791-9099-9ff9673c0c21)
+
 
 Berdasarkan scatter plot diatas, PM2.5, SO2, NO2, CO, TEMP, PRES, DEWP, WSPM akan digunakan sebagai fitur untuk membuat model.
 
-g4
+![korelasi matrix](https://github.com/user-attachments/assets/26c89c16-0bd2-4c60-a5d2-e0fa4bd98856)
+
 
 Korelasi antar variabel menunjukkan bahwa PM2.5 memiliki hubungan kuat dengan polutan lain seperti CO, NO2 dan SO2, yang umumnya berasal dari kendaraan dan industri. Ozon (O3) menunjukkan pola kebalikan dengan NO2 dan CO, karena terbentuk melalui reaksi fotokimia di udara. Dengan memahami hubungan ini, strategi pengendalian polusi dapat difokuskan pada pengurangan emisi dan pemanfaatan faktor lingkungan untuk meningkatkan kualitas udara.
 
@@ -194,6 +200,10 @@ Kekurangan:
 
 - Kurang efektif untuk prediksi data reguler karena lebih fokus pada anomali.
 - Sensitif terhadap jumlah estimators yang digunakan.
+
+![hasil isolation forest](https://github.com/user-attachments/assets/1028f3bb-f0b7-41ff-8e54-4e6363a385ec)
+
+Sebagian besar anomali berada pada nilai PM2.5 yang tinggi (>200). Ini bisa menunjukkan kejadian polusi ekstrem atau kesalahan sensor. Puncak polusi yang sangat tinggi (>500) juga terdeteksi sebagai outlier, yang mungkin terjadi akibat kondisi lingkungan tertentu seperti kebakaran hutan atau pencemaran industri.
 
 ## Evaluation
 
